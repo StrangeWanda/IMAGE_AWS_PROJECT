@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Stitcher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="banner">
+        <h1 class="animated-title">Image Stitcher</h1>
+        <p class="animated-description">Upload images, arrange them, and create stunning stitched visuals!</p>
+    </div>
+
+    <div class="container">
+        <!-- Drag-and-drop area -->
+        <div id="drop-zone">
+            <p>Drag and drop your images here, or click to upload.</p>
+        </div>
+        <input type="file" id="image-input" multiple style="display: none;">
+
+        <!-- Thumbnails -->
+        <div id="thumbnail-container"></div>
+
+        <!-- Layout and controls -->
+        <div id="layout-section" style="display: none;">
+            <h3>Choose a Layout:</h3>
+            <select id="layout-options"></select>
+            <label>
+                Background Color:
+                <input type="color" id="bg-color-picker" value="#ffffff">
+            </label>
+            <button id="stitch-button">Stitch Images</button>
+        </div>
+
+        <!-- Live preview -->
+        <div id="live-preview" style="display: none;">
+            <h3>Live Preview:</h3>
+            <canvas id="preview-canvas"></canvas>
+        </div>
+
+        <!-- Download -->
+        <button id="download-button" style="display: none;">Download Stitched Image</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
